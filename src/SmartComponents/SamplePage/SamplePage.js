@@ -8,9 +8,8 @@ import { PageHeaderTitle } from '@red-hat-insights/insights-frontend-components'
 import { Section } from '@red-hat-insights/insights-frontend-components';
 
 import { Button } from '@patternfly/react-core';
-import { Title } from '@patternfly/react-core';
 
-const SampleComponent = asyncComponent(() => import('../../PresentationalComponents/SampleComponent/sample-component'));
+// const SampleComponent = asyncComponent(() => import('../../PresentationalComponents/SampleComponent/sample-component'));
 
 /**
  * A smart component that handles all the api calls and data needed by the dumb components.
@@ -35,25 +34,26 @@ class SamplePage extends Component {
                         </div>
                         <div className="pf-c-alert__body">
                             <h4 className="pf-c-alert__title">
-                            <span className="sr-only">Info: </span> You have successfully cloned the starter application </h4>
+                                <span className="sr-only">Info: </span> You have successfully cloned the starter application
+                            </h4>
                         </div>
                     </div>
                     <section className='splitcards'>
-                        <div class="pf-c-card">
-                            <div class="pf-c-card__header"> Latest </div>
-                            <div class="pf-c-card__body">
+                        <div className="pf-c-card">
+                            <div className="pf-c-card__header"> Latest </div>
+                            <div className="pf-c-card__body">
                                 <b>You Control Your Data</b>
                                 <p>Check out the third installment in Amaya's series of blog posts about getting to know the various features of Red Hat Insights. 
                                     Her latest blog post discusses data security with Red Hat Insights. 
                                     Learn how to take control of analytics data used to determine vulnerabilities and risks.</p>
                             </div>
-                            <div class="pf-c-card__footer pull-right">
+                            <div className="pf-c-card__footer pull-right">
                                 <a> More </a> 
                             </div>
                         </div>
-                        <div class="pf-c-card">
-                            <div class="pf-c-card__header"> Newest Systems </div>
-                            <div class="pf-c-card__body">
+                        <div className="pf-c-card">
+                            <div className="pf-c-card__header"> Newest Systems </div>
+                            <div className="pf-c-card__body">
                                 <table>
                                     <thead>
                                         <tr>
@@ -83,9 +83,9 @@ class SamplePage extends Component {
                             </div>
                         </div>
                     </section>
-                    <div class="pf-c-card">
-                            <div class="pf-c-card__header"> Patternfly 4 Integration</div>
-                            <div class="pf-c-card__body">
+                    <div className="pf-c-card">
+                            <div className="pf-c-card__header"> Patternfly 4 Integration</div>
+                            <div className="pf-c-card__body">
                                 <Section type='button-group'>
                                     <Button variant='primary'> PF-Next Primary Button </Button>
                                     <Button variant='secondary'> PF-Next Secondary Button </Button>
