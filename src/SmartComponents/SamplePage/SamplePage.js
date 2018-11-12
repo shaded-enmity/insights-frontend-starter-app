@@ -28,6 +28,11 @@ class SamplePage extends Component {
                     <p> This is page header text </p>
                 </PageHeader>
                 <Main>
+                    <div className='pf-l-split'>
+                        <div className='pf-l-split__item'> split </div>
+                        <div className='pf-l-split__item pf-m-main'> split </div>
+                        <div className='pf-l-split__item'> split </div>
+                    </div>
                     <h1> Sample Component </h1>
                     <SampleComponent> Sample Component </SampleComponent>
                     <h1> Cards </h1>
