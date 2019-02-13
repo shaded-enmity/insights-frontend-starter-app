@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import asyncComponent from '../../Utilities/asyncComponent';
 import './sample-page.scss';
 
@@ -11,21 +11,24 @@ const SampleComponent = asyncComponent(() => import('../../PresentationalCompone
 // const PageHeader2 = asyncComponent(() => import('../../PresentationalComponents/PageHeader/page-header'));
 // const PageHeaderTitle2 = asyncComponent(() => import('../../PresentationalComponents/PageHeader/page-header-title'));
 
-/**
- * A smart component that handles all the api calls and data needed by the dumb components.
- * Smart components are usually classes.
- *
- * https://reactjs.org/docs/components-and-props.html
- * https://medium.com/@thejasonfile/dumb-components-and-smart-components-e7b33a698d43
- */
-class SamplePage extends Component {
+const data = {
+    machine: {
+        name: 'my.upgraded.machine.com',
+        id: '1be168ff837f043bde17c0314341c84271047b31'
+    }
+};
 
+const getLinkForMachine = machine => {
+    return <Link to={ `/inventory/${machine.id}` }><i className='pf-icon pf-icon-monitoring'></i>{ `${machine.name}` }</Link>;
+};
+
+class SamplePage extends Component {
     render() {
         return (
             <React.Fragment>
                 <PageHeader>
-                    <PageHeaderTitle title='Sample Insights App'/>
-                    <p> This is page header text </p>
+                    <PageHeaderTitle title='Leapp Upgrade Report'/>
+                    <p>{ getLinkForMachine(data.machine) }</p>
                 </PageHeader>
                 <Main>
                     <h1> Sample Component </h1>
